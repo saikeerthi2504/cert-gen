@@ -1,8 +1,8 @@
-import "./StepsBar.css";
+import "./Stepsbar.css";
 
 const STEPS = ["Details", "Achievement", "Review", "Certificate"];
 
-export default function Stepsbar({ current }) {
+export default function StepsBar({ current }) {
   return (
     <div className="steps-bar">
       {STEPS.map((label, i) => {
