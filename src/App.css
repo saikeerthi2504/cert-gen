@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cinzel:wght@400;600;700&family=Lato:wght@300;400;700&display=swap');
+
+/* ── Reset & Base ─────────────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --gold:        #c8a96e;
+  --gold-light:  #f0d080;
+  --gold-dim:    #8a7040;
+  --bg:          #0d0d0d;
+  --bg-card:     #111111;
+  --bg-input:    #0a0a0a;
+  --border:      #1e1e1e;
+  --border-mid:  #2a2a2a;
+  --text:        #f0ead6;
+  --text-muted:  #666666;
+  --text-faint:  #333333;
+  --font-display: 'Cinzel', serif;
+  --font-serif:   'Playfair Display', serif;
+  --font-body:    'Lato', sans-serif;
+  --radius:       2px;
+  --transition:   0.25s ease;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── App Wrapper ──────────────────────────────────────────────────────────── */
+.app-wrapper {
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse at 20% 50%, #1a0a00 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 20%, #0a1a0a 0%, transparent 50%),
+    var(--bg);
+  padding: 48px 20px 80px;
+}
+
+/* ── App Header ───────────────────────────────────────────────────────────── */
+.app-header {
+  text-align: center;
+  margin-bottom: 52px;
+}
+
+.app-header__eyebrow {
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 14px;
+}
+
+.app-header__title {
+  font-family: var(--font-display);
+  font-size: clamp(30px, 5vw, 54px);
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.1;
+}
+
+.app-header__rule {
+  display: block;
+  width: 80px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  margin: 20px auto 0;
+}
+
+/* ── Print ────────────────────────────────────────────────────────────────── */
+@media print {
+  body * { visibility: hidden; }
+  #certificate-doc,
+  #certificate-doc * { visibility: visible; }
+  #certificate-doc {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 40px;
+  }
+}
+
+/* ── Responsive ───────────────────────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .app-wrapper { padding: 28px 14px 60px; }
+}

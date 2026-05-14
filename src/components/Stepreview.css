@@ -1,0 +1,46 @@
+/* ── Step Review ──────────────────────────────────────────────────────────── */
+.review-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 24px;
+}
+
+.review-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 14px 16px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: border-color var(--transition);
+}
+
+.review-item:hover {
+  border-color: rgba(200, 169, 110, 0.2);
+}
+
+.review-item__label {
+  font-size: 9px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #555;
+  font-weight: 700;
+}
+
+.review-item__value {
+  font-family: var(--font-serif);
+  font-size: 15px;
+  color: var(--text);
+  line-height: 1.4;
+}
+
+.review-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 26px 0;
+}
+
+@media (max-width: 600px) {
+  .review-grid { grid-template-columns: 1fr; }
+}
