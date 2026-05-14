@@ -1,10 +1,10 @@
 import { useState } from "react";
 import "./App.css";
 
-import StepsBar        from "./components/StepsBar";
-import StepDetails     from "./components/Stepdetails";
+import StepsBar from "./components/StepsBar";
+import StepDetails from "./components/Stepdetails";
 import StepAchievement from "./components/Stepachievement";
-import StepReview      from "./components/Stepreview";
+import StepReview from "./components/Stepreview";
 import StepCertificate from "./components/Stepcertificate";
 
 const INITIAL_FORM = {
