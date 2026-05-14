@@ -147,7 +147,7 @@ function Signature({ name, role }) {
 }
 
 /* ── Main Certificate ────────────────────────────────────────────────────── */
-export default function CertificateDoc({ data, theme = "gold" }) {
+export default function Certificatedoc({ data, theme = "gold" }) {
   const org    = data.issuedBy || "Excellence Academy";
   const id     = makeCertId();
   const accent = ACCENT_MAP[theme] || ACCENT_MAP.gold;

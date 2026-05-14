@@ -1,5 +1,5 @@
 import "./FormCard.css";
-import "./StepReview.css";
+import "./Stepreview.css";
 
 function fmtDate(d) {
   if (!d) return "—";
@@ -8,7 +8,7 @@ function fmtDate(d) {
   });
 }
 
-export default function StepReview({ data, onBack, onGenerate }) {
+export default function Stepreview({ data, onBack, onGenerate }) {
   const rows = [
     ["Full Name",        data.fullName],
     ["Email",            data.email],

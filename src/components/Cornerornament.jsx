@@ -1,5 +1,5 @@
 /** Decorative corner SVG used on the certificate. */
-export default function CornerOrnament({ accentColor = "#c8a96e" }) {
+export default function Cornerornament({ accentColor = "#c8a96e" }) {
   return (
     <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M4 48 L4 4 L48 4"  stroke={accentColor} strokeWidth="1.6" />

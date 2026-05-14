@@ -10,7 +10,7 @@ const THEMES = [
   { id: "forest", label: "Forest", color: "#166534" },
 ];
 
-export default function StepCertificate({ data, onReset }) {
+export default function Stepcertificate({ data, onReset }) {
   const [theme, setTheme] = useState("gold");
 
   return (
