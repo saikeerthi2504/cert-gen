@@ -8,24 +8,29 @@ import StepReview from "./components/Stepreview";
 import StepCertificate from "./components/Stepcertificate";
 
 const INITIAL_FORM = {
-  fullName:       "",
-  email:          "",
-  phone:          "",
-  education:      "",
-  institution:    "",
-  course:         "",
-  duration:       "",
+  fullName: "",
+  email: "",
+  phone: "",
+  education: "",
+  institution: "",
+  course: "",
+  duration: "",
   completionDate: "",
-  grade:          "",
-  issuedBy:       "",
-  remarks:        "",
+  grade: "",
+  issuedBy: "",
+  remarks: "",
 };
 
 export default function App() {
   const [step, setForm_step] = useState(0);
-  const [form, setForm]      = useState(INITIAL_FORM);
+  const [form, setForm] = useState(INITIAL_FORM);
 
-  const update = (key, value) => setForm(prev => ({ ...prev, [key]: value }));
+  const update = (key, value) => {
+    setForm((prev) => ({
+      ...prev,
+      [key]: value,
+    }));
+  };
 
   const reset = () => {
     setForm(INITIAL_FORM);
@@ -34,18 +39,20 @@ export default function App() {
 
   return (
     <div className="app-wrapper">
-
-      {/* ── Header ── */}
       <header className="app-header">
-        <div className="app-header__eyebrow">✦ Excellence Awards Platform ✦</div>
-        <h1 className="app-header__title">Certificate Generator</h1>
+        <div className="app-header__eyebrow">
+          ✦ Excellence Awards Platform ✦
+        </div>
+
+        <h1 className="app-header__title">
+          Certificate Generator
+        </h1>
+
         <span className="app-header__rule" />
       </header>
 
-      {/* ── Steps bar (hidden on certificate screen) ── */}
       {step < 3 && <StepsBar current={step} />}
 
-      {/* ── Step Screens ── */}
       {step === 0 && (
         <StepDetails
           data={form}
@@ -77,7 +84,6 @@ export default function App() {
           onReset={reset}
         />
       )}
-
     </div>
   );
 }
