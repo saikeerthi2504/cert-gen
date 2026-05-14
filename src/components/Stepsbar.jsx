@@ -2,7 +2,7 @@ import "./StepsBar.css";
 
 const STEPS = ["Details", "Achievement", "Review", "Certificate"];
 
-export default function StepsBar({ current }) {
+export default function Stepsbar({ current }) {
   return (
     <div className="steps-bar">
       {STEPS.map((label, i) => {

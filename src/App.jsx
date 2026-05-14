@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 
-import StepsBar        from "./components/StepsBar";
+import StepsBar        from "./components/Stepsbar";
 import StepDetails     from "./components/Stepdetails";
 import StepAchievement from "./components/Stepachievement";
 import StepReview      from "./components/Stepreview";
