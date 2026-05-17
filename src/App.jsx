@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 
-import StepsBar from "./components/Stepsbar";
+import Stepsar from "./components/Stepsbar";
 import StepDetails from "./components/Stepdetails";
 import StepAchievement from "./components/Stepachievement";
 import StepReview from "./components/Stepreview";
@@ -51,7 +51,7 @@ export default function App() {
         <span className="app-header__rule" />
       </header>
 
-      {step < 3 && <StepsBar current={step} />}
+      {step < 3 && <Stepsbar current={step} />}
 
       {step === 0 && (
         <StepDetails
