@@ -1,4 +1,4 @@
-import "./Formcard.css";
+import "./FormCard.css";
 
 const COURSES = [
   "Web Development", "Data Science", "Machine Learning", "Cybersecurity",
@@ -11,7 +11,7 @@ const GRADES = [
   "B (Good)", "C (Satisfactory)", "Pass",
 ];
 
-export default function Stepachievement({ data, onChange, onNext, onBack }) {
+export default function StepAchievement({ data, onChange, onNext, onBack }) {
   const isValid = data.course && data.completionDate && data.grade;
 
   return (

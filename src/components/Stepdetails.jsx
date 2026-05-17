@@ -1,6 +1,6 @@
 import "./FormCard.css";
 
-export default function Stepdetails({ data, onChange, onNext }) {
+export default function StepDetails({ data, onChange, onNext }) {
   const isValid = data.fullName.trim() && data.email.trim() && data.education;
 
   return (
